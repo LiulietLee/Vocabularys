@@ -19,8 +19,7 @@ namespace Vocabularys
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://onedrive.live.com/?authkey=%21ANIEbAUKHJG5crY&id=64E22A4EBDC4FC65%2123199&cid=64E22A4EBDC4FC65");
-
+            System.Diagnostics.Process.Start("https://github.com/LiulietLee/Vocabularys/");
         }
     }
 }

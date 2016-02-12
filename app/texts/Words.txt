@@ -1,0 +1,11 @@
+finally:终于
+do:做
+run:运行
+try:试试
+look:看
+in:里
+out:外
+up:上
+down:下
+left:左
+right:右
