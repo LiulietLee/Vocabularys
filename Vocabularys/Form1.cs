@@ -16,10 +16,9 @@ namespace Vocabularys
         private int englishTimeLeft = 2;
 
         private List<string> chinese = new List<string>();
-        private string[] chineseWords = new string[] { };
-
         private List<string> english = new List<string>();
-        private string[] englishWords = new string[] { };
+        private List<string> chineseWords = new List<string>();
+        private List<string> englishWords = new List<string>();
 
         private List<string> previousChinese = new List<string>();
         private string[] previousChineseWords = new string[] { };
@@ -46,15 +45,22 @@ namespace Vocabularys
             {
                 char[] spliteChar = { ':' };
                 string[] wordOfThisLine = line.Split(spliteChar);
+                if (wordOfThisLine.Length <= 1)
+                {
+                    char[] spliteChar2 = { '：' };
+                    wordOfThisLine = line.Split(spliteChar2);
+                }
 
-                english.Add(wordOfThisLine[0]);
-                chinese.Add(wordOfThisLine[1]);
+                if (wordOfThisLine.Length > 1)
+                {
+                    englishWords.Add(wordOfThisLine[0]);
+                    english.Add(wordOfThisLine[0]);
+                    chineseWords.Add(wordOfThisLine[1]);
+                    chinese.Add(wordOfThisLine[1]);
+                }
             }
 
-            chineseWords = chinese.ToArray();
-            englishWords = english.ToArray();
             orderOfPrevious = previousChineseWords.Length - 1;
-
             EnglishLabel.Hide();
         }
 
@@ -81,11 +87,12 @@ namespace Vocabularys
             isPlaying = !isPlaying;
             timer1.Start();
 
-            if (ChineseLabel.Text == "Ready?")
+            if (ChineseLabel.Text == "Ready?" || ChineseLabel.Text == "终了。")
             {
                 gotoNextWord();
             }
         }
+
         private void stopPlay()
         {
             PlayButton.Image = Image.FromFile("res/Play.png");
@@ -145,7 +152,16 @@ namespace Vocabularys
             previousEnglish.Add(english);
             previousEnglishWords = previousEnglish.ToArray();
 
-            rand = random.Next(chineseWords.Length);
+            englishWords.RemoveAt(rand);
+            chineseWords.RemoveAt(rand);
+
+            if (englishWords.Count == 0)
+            {
+                testOver();
+                return;
+            }
+
+            rand = random.Next(chineseWords.Count);
             ChineseLabel.Text = chineseWords[rand];
             EnglishLabel.Text = englishWords[rand];
 
@@ -154,7 +170,23 @@ namespace Vocabularys
             hideEnglish();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void testOver()
+        {
+            ChineseLabel.Text = "终了。";
+            EnglishLabel.Text = "(゜-゜)つロ";
+            showEnglish();
+            timer1.Stop();
+            chineseWords = chinese;
+            englishWords = english;
+            isPlaying = false;
+            isEnglishShowed = false;
+            timeLeft = 0;
+            rand = 0;
+            previousChinese.Clear();
+            previousEnglish.Clear();
+        }
+
+    private void timer1_Tick(object sender, EventArgs e)
         {
             if (!isPlaying)
             {

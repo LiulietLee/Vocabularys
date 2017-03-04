@@ -19,7 +19,7 @@ namespace Vocabularys
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.facebook.com/liuliet.lee");
+            System.Diagnostics.Process.Start("http://space.bilibili.com/4056345/#!/");
         }
     }
 }

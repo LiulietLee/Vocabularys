@@ -52,11 +52,11 @@
             // ChineseLabel
             // 
             this.ChineseLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ChineseLabel.Font = new System.Drawing.Font("LiSu", 55F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ChineseLabel.Location = new System.Drawing.Point(4, 148);
+            this.ChineseLabel.Font = new System.Drawing.Font("DengXian", 55F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ChineseLabel.Location = new System.Drawing.Point(4, 231);
             this.ChineseLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ChineseLabel.Name = "ChineseLabel";
-            this.ChineseLabel.Size = new System.Drawing.Size(1966, 247);
+            this.ChineseLabel.Size = new System.Drawing.Size(1966, 386);
             this.ChineseLabel.TabIndex = 1;
             this.ChineseLabel.Text = "Ready?";
             this.ChineseLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -65,11 +65,11 @@
             // 
             this.TimeLabel.AutoSize = true;
             this.TimeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TimeLabel.Font = new System.Drawing.Font("OCR A Std", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimeLabel.Font = new System.Drawing.Font("OCR A Std", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeLabel.Location = new System.Drawing.Point(4, 0);
             this.TimeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TimeLabel.Name = "TimeLabel";
-            this.TimeLabel.Size = new System.Drawing.Size(1966, 148);
+            this.TimeLabel.Size = new System.Drawing.Size(1966, 231);
             this.TimeLabel.TabIndex = 2;
             this.TimeLabel.Text = "Time";
             this.TimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -82,7 +82,7 @@
             this.PlayButton.Location = new System.Drawing.Point(790, 0);
             this.PlayButton.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PlayButton.Name = "PlayButton";
-            this.PlayButton.Size = new System.Drawing.Size(385, 240);
+            this.PlayButton.Size = new System.Drawing.Size(385, 379);
             this.PlayButton.TabIndex = 3;
             this.PlayButton.Click += new System.EventHandler(this.PlayButton_Click);
             // 
@@ -94,7 +94,7 @@
             this.RightButton.Location = new System.Drawing.Point(1183, 0);
             this.RightButton.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.RightButton.Name = "RightButton";
-            this.RightButton.Size = new System.Drawing.Size(385, 240);
+            this.RightButton.Size = new System.Drawing.Size(385, 379);
             this.RightButton.TabIndex = 5;
             this.RightButton.Click += new System.EventHandler(this.RightButton_Click);
             // 
@@ -106,7 +106,7 @@
             this.LeftButton.Location = new System.Drawing.Point(397, 0);
             this.LeftButton.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LeftButton.Name = "LeftButton";
-            this.LeftButton.Size = new System.Drawing.Size(385, 240);
+            this.LeftButton.Size = new System.Drawing.Size(385, 379);
             this.LeftButton.TabIndex = 6;
             this.LeftButton.Click += new System.EventHandler(this.LeftButton_Click);
             // 
@@ -160,11 +160,11 @@
             // EnglishLabel
             // 
             this.EnglishLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EnglishLabel.Font = new System.Drawing.Font("Segoe UI Symbol", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EnglishLabel.Location = new System.Drawing.Point(4, 395);
+            this.EnglishLabel.Font = new System.Drawing.Font("Arial", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EnglishLabel.Location = new System.Drawing.Point(4, 617);
             this.EnglishLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EnglishLabel.Name = "EnglishLabel";
-            this.EnglishLabel.Size = new System.Drawing.Size(1966, 247);
+            this.EnglishLabel.Size = new System.Drawing.Size(1966, 386);
             this.EnglishLabel.TabIndex = 8;
             this.EnglishLabel.Text = "Let\'s go!";
             this.EnglishLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -179,14 +179,14 @@
             this.tableLayoutPanel1.Controls.Add(this.ChineseLabel, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 39);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.77778F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.77778F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.77778F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1974, 890);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1974, 1390);
             this.tableLayoutPanel1.TabIndex = 9;
             // 
             // tableLayoutPanel2
@@ -201,12 +201,12 @@
             this.tableLayoutPanel2.Controls.Add(this.RightButton, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.PlayButton, 2, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 646);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 1007);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1966, 240);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1966, 379);
             this.tableLayoutPanel2.TabIndex = 9;
             // 
             // Form1
@@ -214,12 +214,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(1974, 929);
+            this.ClientSize = new System.Drawing.Size(1974, 1429);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
-            this.Text = "Vocabularys - version 0.85 - Created by Liuliet.Lee";
+            this.Text = "Vocabularys - version 0.90 - Created by Liuliet.Lee";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
